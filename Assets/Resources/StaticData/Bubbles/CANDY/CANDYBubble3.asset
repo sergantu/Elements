@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8300c9b9dac437e90822cf198538c7e, type: 3}
+  m_Name: CANDYBubble3
+  m_EditorClassIdentifier: 
+  BubbleTypeId: 3
+  UpperBubbleTypeId: 4
+  PrefabReference:
+    m_AssetGUID: e3ecbb7fb76ba4743a777e1c1107b91d
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  CanSpawn: 1
+  SpawnWeight: 30
+  MergePoints: 8
