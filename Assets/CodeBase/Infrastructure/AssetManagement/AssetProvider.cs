@@ -55,6 +55,13 @@ namespace CodeBase.Infrastructure.AssetManagement
             _objectResolver.InjectGameObject(obj);
             return obj;
         }
+        
+        public async UniTask<GameObject> Instantiate(string path, Vector3 position, Transform parent)
+        {
+            GameObject obj = await Addressables.InstantiateAsync(path, position, Quaternion.identity, parent);
+            _objectResolver.InjectGameObject(obj);
+            return obj;
+        }
 
         public virtual async UniTask<GameObject> Instantiate(string path)
         {

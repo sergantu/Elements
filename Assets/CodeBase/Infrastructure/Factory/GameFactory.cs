@@ -41,6 +41,28 @@ namespace CodeBase.Infrastructure.Factory
                 await _assets.Load<GameObject>(bubbleStaticData.PrefabReference);
             }
         }
+        
+        public async UniTask<GameObject> CreateBoard()
+        {
+            return await _assets.Instantiate(AssetAddress.Board);
+        }
+        
+        public async UniTask<GameObject> CreateElement(string name, Vector3 position)
+        {
+            return await _assets.Instantiate(name, position);
+        }
+
+        public async UniTask<GameObject> CreateFireElement(Vector3 position, Transform parent)
+        {
+            return await _assets.Instantiate(AssetAddress.Fire, position, parent);
+        }
+        public async UniTask<GameObject> CreateWaterElement(Vector3 position, Transform parent)
+        {
+            return await _assets.Instantiate(AssetAddress.Water, position, parent);
+        }
+        
+        
+        
 
         public async UniTask CreateMenu(Transform parent)
         {

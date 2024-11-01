@@ -1,3 +1,4 @@
+using CodeBase.GameLevel;
 using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.States;
@@ -29,6 +30,12 @@ namespace CodeBase.Infrastructure
             builder.Register<LoadProgressState>(Lifetime.Transient);
             builder.Register<LoadLevelState>(Lifetime.Transient);
             builder.Register<GameLoopState>(Lifetime.Transient);
+            
+            
+            builder.Register<ElementsGenerator>(Lifetime.Singleton);
+            builder.Register<GameLogicService>(Lifetime.Singleton);
+            builder.Register<MoveBlockService>(Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
+
         }
 
         /*private void HandleException(string condition, string stackTrace, LogType type)
